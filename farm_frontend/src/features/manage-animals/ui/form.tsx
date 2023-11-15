@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export const AddAnimalFormComponent = ({
   onAddAnimal,
@@ -7,7 +7,7 @@ export const AddAnimalFormComponent = ({
   error,
 }: AddAnimalFormComponentProps) => {
   return (
-    <AnimatePresence>
+    <>
       <h1 className="text-2xl">Add new animal form:</h1>
       <div className="my-6">
         <label
@@ -42,6 +42,6 @@ export const AddAnimalFormComponent = ({
         Add Animal
       </motion.button>
       {error && <p className="error-container text-red-700">{error}</p>}
-    </AnimatePresence>
+    </>
   );
 };
